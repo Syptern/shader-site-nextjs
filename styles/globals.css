@@ -1,3 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  @apply font-medium text-5xl 
+}
+
 html,
 body {
   padding: 0;
@@ -23,4 +31,20 @@ a {
     color: white;
     background: black;
   }
+}
+
+#canvas {
+  position: fixed;
+  height: 1200px;
+  width: 100vw;
+  z-index: -1;
+}
+
+#canvas::after {
+  content: '';
+  height: 750px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: linear-gradient(black,rgba(0,0,0,0))
 }
